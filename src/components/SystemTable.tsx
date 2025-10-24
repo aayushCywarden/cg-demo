@@ -119,7 +119,7 @@ export function SystemsTable() {
         businessOrg: false,
         drTier: false
     });
-    const itemsPerPage = 7; // Show 7 items per page
+    const itemsPerPage = 4; // Show 7 items per page
 
     const startIndex = currentPage * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
@@ -159,10 +159,10 @@ export function SystemsTable() {
 
     return (
         <div className="">
-            <div className="px-10 py-10">
+            <div className="px-14 py-3">
                 <div className="flex items-center justify-between">
                     <div>
-                        <h2 className="text-2xl font-semibold text-gray-700 mb-0.5">Major Systems</h2>
+                        <h2 className="text-3xl font-extrabold font-inter text-gray-500">Major Systems</h2>
                         <p className="text-sm text-gray-400">
                             High-level resilience overview across all applications
                         </p>
@@ -283,40 +283,40 @@ export function SystemsTable() {
                 </div>
             </div>
 
-            <div className="bg-white px-10 rounded-lg shadow-sm border border-gray-200">
+            <div className="bg-white px-8 rounded-lg shadow-sm border border-gray-200">
                 <div className="hidden md:block overflow-x-auto">
                     <table className="w-full">
                         <thead>
                             <tr className="border-b border-gray-200 bg-white">
-                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wide">
+                                <th className="px-6 py-2 text-left text-xs font-medium text-gray-400 uppercase tracking-wide">
                                     Name
                                 </th>
-                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wide">
+                                <th className="px-6 py-2 text-left text-xs font-medium text-gray-400 uppercase tracking-wide text-center">
                                     DB Tier
                                 </th>
-                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wide">
+                                <th className="px-6 py-2 text-left text-xs font-medium text-gray-400 uppercase tracking-wide text-center">
                                     Status
                                 </th>
-                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wide">
+                                <th className="px-6 py-2 text-left text-xs font-medium text-gray-400 uppercase tracking-wide">
                                     Health Score
                                 </th>
-                                <th className="px-6 py-3"></th>
+                                <th className="px-6 py-2"></th>
                             </tr>
                         </thead>
                         <tbody className="bg-white">
                             {currentSystems.map((system, index) => (
                                 <>
                                     <tr key={index} className="hover:bg-gray-50 transition-colors border-b border-gray-200">
-                                        <td className="px-6 py-4">
+                                        <td className="px-6 py-4 min-w-[300px] max-w-[300px]">
                                             <div>
                                                 <div className="text-sm font-semibold text-gray-700">{system.name}</div>
                                                 <div className="text-xs text-gray-400">{system.description}</div>
                                             </div>
                                         </td>
-                                        <td className="px-6 py-4">
+                                        <td className="px-6 py-4 text-center">
                                             <div className="text-sm text-gray-600">{system.dbTier}</div>
                                         </td>
-                                        <td className="px-6 py-4">
+                                        <td className="px-6 py-4 text-center">
                                             <span
                                                 className={"inline-flex items-center px-3 py-1 rounded-full text-xs font-medium " +
                                                     statusConfig[system.status].bg + " " +
@@ -469,7 +469,7 @@ export function SystemsTable() {
                     ))}
                 </div>
 
-                <div className="px-6 py-3 border-t border-gray-200 flex items-center justify-center gap-1">
+                <div className="px-6 py-3 border-t border-gray-200 flex justify-end gap-40">
                     <button
                         onClick={handlePrevPage}
                         disabled={currentPage === 0}

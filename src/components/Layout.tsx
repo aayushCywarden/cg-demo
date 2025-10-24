@@ -3,11 +3,11 @@ import { Menu, X } from "lucide-react";
 import { Sidebar } from "./Sidebar.tsx";
 import { Header } from "./Header.tsx";
 
-interface ResponsiveLayoutProps {
+interface LayoutProps {
   children: ReactNode;
 }
 
-export function ResponsiveLayout({ children }: ResponsiveLayoutProps) {
+export function Layout({ children }: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (

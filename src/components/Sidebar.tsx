@@ -1,21 +1,39 @@
 import { HelpCircle, MessageCircle } from "lucide-react";
 
 export function Sidebar() {
-  const navItems = Array(8).fill(null);
-
   return (
-    <aside className="w-[200px] bg-[#265e99] min-h-screen sticky top-0 flex flex-col">
+    <div className="w-[200px] bg-[#265e99] min-h-screen sticky top-0 flex flex-col">
       <div className="px-4 pt-6 pb-8">
         <img src="/cg-logo.svg" alt="CG-Logo" className="w-full h-full" />
       </div>
 
       <nav className="flex-1 px-3 space-y-3">
-        {navItems.map((_, i) => (
-          <div
-            key={i}
-            className="h-10 bg-[#6B8EAF] rounded-full hover:bg-[#7A9DBF] transition-colors cursor-pointer"
-          />
-        ))}
+        <div className="flex gap-2">
+          <img src="/dashboard.svg" />
+          <span className="text-white text-sm font-medium pt-2">Dashboard</span>
+        </div>
+        <hr className="border-gray-200" />
+        <div className="flex gap-2">
+          <img src="/analytics.svg" />
+          <span className="text-white text-sm font-medium pt-2">Analytics</span>
+        </div>
+        <hr className="border-gray-200" />
+        <div className="flex gap-2">
+          <img src="/reports.svg" />
+          <span className="text-white text-sm font-medium pt-2">Reports</span>
+        </div>
+        <hr className="border-gray-200" />
+        <div className="flex gap-2 pl-1">
+          <div className="bg-[#1A1F37] rounded-xl p-2">
+            <img src="/security.svg" />
+          </div>
+          <span className="text-white text-sm font-medium pt-2">Security</span>
+        </div>
+        <hr className="border-gray-200" />
+        <div className="flex gap-2">
+          <img src="/settings.svg" />
+          <span className="text-white text-sm font-medium pt-2">Settings</span>
+        </div>
       </nav>
 
       <div className="px-3 pb-4 space-y-2">
@@ -32,6 +50,6 @@ export function Sidebar() {
           <span className="text-sm">Contact Us</span>
         </button>
       </div>
-    </aside>
+    </div>
   );
 }

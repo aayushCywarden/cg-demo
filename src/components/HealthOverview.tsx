@@ -13,10 +13,10 @@ export function HealthOverview() {
   const criticalAngle = (healthData.critical / total) * 360;
 
   return (
-    <div className="px-6 pt-6 pb-3 bg-white">
+    <div className="px-14 py-3 bg-white">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {/* Overall Health Distribution Card */}
-        <div className="bg-gray-100 rounded-lg p-5">
+        <div className="bg-gray-100 rounded-lg px-5 py-3">
           <div className="flex items-start justify-between mb-3">
             <h3 className="text-sm font-medium text-gray-700">Overall Health Distribution</h3>
             <button className="text-gray-300 hover:text-gray-500">
@@ -94,11 +94,11 @@ export function HealthOverview() {
         </div>
 
         {/* Placeholder cards for additional metrics */}
-        <div className="bg-gray-100 rounded-lg p-5">
-          {/* Empty card for future content */}
+        <div className="bg-gray-100 rounded-lg justify-center flex items-center">
+          <img src="/card2.svg" className="w-[90%] h-full" />
         </div>
-        <div className="bg-gray-100 rounded-lg p-5">
-          {/* Empty card for future content */}
+        <div className="bg-gray-100 rounded-lg">
+          <img src="/card3.svg" className="w-full h-full" />
         </div>
       </div>
     </div>

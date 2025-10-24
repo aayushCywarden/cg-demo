@@ -1,14 +1,14 @@
-import { ResponsiveLayout } from './components/ResponsiveLayout.tsx'
+import { Layout } from './components/Layout.tsx'
 import { SystemsTable } from './components/SystemTable.tsx'
 import { HealthOverview } from './components/HealthOverview.tsx'
 
 function App() {
 
   return (
-    <ResponsiveLayout>
+    <Layout>
       <HealthOverview />
       <SystemsTable />
-    </ResponsiveLayout>
+    </Layout>
   )
 }
 
